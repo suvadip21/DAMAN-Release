@@ -1,6 +1,8 @@
 ## About
 This repository provides the source-code for our implementation of *D*omain *A*dapted *M*ulti *A*moeba*N*et or __DAMAN__. Please follow the following links to access our publication in _IEEE Trans. on Medical Imaging_. [IEEExplore](https://ieeexplore.ieee.org/abstract/document/9870864), [preprint](https://www.researchgate.net/publication/363160645_Domain_Adapted_Multi-task_Learning_For_Segmenting_Amoeboid_Cells_in_Microscopy)
 
+_This code is built on [this](https://github.com/JorisRoels/domain-adaptive-segmentation) repository. Consider citing the Y-Net paper as well if you are using this code._
+
 -------------------------------
 
 ## Citing this work
@@ -12,16 +14,15 @@ If you are using this software, please cite the following articles:
 
 [3] R. Sarkar, S. Mukherjee, E. Labruyère and J. -C. Olivo-Marin, "Learning to segment clustered amoeboid cells from brightfield microscopy via multi-task learning with adaptive weight selection," 2020 25th International Conference on Pattern Recognition (ICPR), 2021, pp. 3845-3852, doi: 10.1109/ICPR48806.2021.9412641.
 
-The original code is from the group of Anna Kreshuk (https://github.com/JorisRoels/domain-adaptive-segmentation) Joris Roels, Julian Hennies, Yvan Saeys, Wilfried Philips, Anna Kreshuk, "Domain adaptive segmentation in volume electron microscopy imaging", ISBI 2019.
 -------------------------------
 
 ## Usage
 The entry-point to the codebase is the [main.py](main.py) file. The user has the option to
 * Train the network on their own dataset
 * Load a pre-trained model and use that for inference on their own data
-__Note__: The provided pretrained model was trained on 256x256 images. Results on different resolutions could require fine-tuning
+* __Note__: _The provided pretrained model was trained on 256x256 images. Results on different resolutions could require fine-tuning
 This model is trained (supervised) on brightfield, and domain adapted to fluorescence data.
-The results are saved as 'inference.png'
+The results are saved as 'inference.png'_
 -------------------------------
 
 ## Data
