@@ -14,11 +14,12 @@ import numpy as np
 import torch
 import torch.nn as nn
 from torch.autograd import Variable
+import matplotlib
+matplotlib.use('TkAgg')
 
 from networks.unet import UNetEncoder2D, UNetDecoder2D
 from util.losses import DiceLoss, BCELoss, MSELoss
 import time
-
  
 class DaManLiteNet(nn.Module):
     """

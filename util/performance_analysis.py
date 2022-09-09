@@ -1,7 +1,7 @@
 import numpy as np
 import pickle
-from helpers_docker  import BinaryMorphology as bwmorph
-from helpers_docker import Thresholding as T
+from .helpers_docker  import BinaryMorphology as bwmorph
+from .helpers_docker import Thresholding as T
 from scipy import ndimage as ndi
 from skimage import measure
 
@@ -17,7 +17,7 @@ def mse_loss(pred, target, smooth=1.):
     loss = np.sqrt(np.mean((pred-target)**2))
     return loss
 
-def ReconstructObjects(y_fg, y_bg, y_edg, data, min_ar=50, min_intensity=0.1):
+def ReconstructObjects(y_fg, y_bg, y_edg, data, min_ar=50, min_intensity=0.15):
     fg_seg, _ = T(y_fg).otsu_threshold()
     bg_seg, _ = T(y_bg).otsu_threshold()
     edg_seg, th = T(y_edg).otsu_threshold()
@@ -48,7 +48,6 @@ def ReconstructObjects(y_fg, y_bg, y_edg, data, min_ar=50, min_intensity=0.1):
 
     return label_img
 
-def ReconstructObjects512(y_fg, y_bg, y_edg, data, min_ar=50, min_intensity=0.1):
     fg_seg, _ = T(y_fg).otsu_threshold()
     bg_seg, _ = T(y_bg).otsu_threshold()
     edg_seg, th = T(y_edg).otsu_threshold()

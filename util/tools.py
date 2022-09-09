@@ -1,4 +1,3 @@
-
 import numpy as np
 import torch
 import random
@@ -201,7 +200,6 @@ class ImageDataset(Dataset):  # Defining the class to load datasets
             masks_aug = 1. * (IP.imresize(masks_aug, des_res_mm=self.resize_factor) > 0.1)
             bg_masks_aug = 1. * (IP.imresize(bg_masks_aug, des_res_mm=self.resize_factor) > 0.1)
             edgwt_aug = IP.imresize(edgwt_aug, des_res_mm=self.resize_factor)
-        
 
         sample_chw['image'] = np.ascontiguousarray(img_aug[np.newaxis, ...], dtype='float')
         sample_chw['masks'] = np.ascontiguousarray(masks_aug[np.newaxis, ...], dtype='float')
