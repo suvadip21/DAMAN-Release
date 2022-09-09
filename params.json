@@ -1,0 +1,10 @@
+{
+    "data_dir": "/data/AmeobaNetDAISBI/", 
+    "res_factor": "2",
+    "model_savepath": "/code/logs/",
+    "model_save_interval": "5",
+    "num_epochs":"50",
+    "learning_rate": "1e-4",
+    "batch_size": "10",
+    "pretrained_model": ""
+}
