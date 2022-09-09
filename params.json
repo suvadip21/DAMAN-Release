@@ -7,5 +7,5 @@
     "learning_rate": "1e-4",
     "batch_size": "10",
     "pretrained_model": "/code/pretrained/damanBIA.pt",
-    "test_image": "/code/test_data/0017.png"
+    "test_image": "/code/test_data/brightfield1.png"
 }

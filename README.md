@@ -27,7 +27,7 @@ The results are saved as 'inference.png'_
 
 ## Data
 If you wish to have access to the database of cell images used in this paper, please contact maria[dot]manich[at]pasteur[dot]fr.
-A few test images are provided to test our pre-trained model. 
+A few images are provided to test our pre-trained model. 
 
 -------------------------------
 
